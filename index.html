@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Supporting newcomer youth through a 21-day habit challenge to improve language skills and adapt to Canadian social norms.">
+    <title>21-Day Habit Challenge</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Header and Navigation -->
+    <header>
+    <nav>
+        <ul>
+           <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <!-- Hero Section -->
+    <section id="home">
+        <div class="intro">
+            <h1>Welcome to the 21-Day Habit Challenge</h1>
+            <p>Helping newcomer youth build language skills and adapt to Canadian culture.</p>
+<p> please sign up here after you Register below. </p>
+            <a href="signup.html" class="cta-btn">Sign-up Here</a>
+            <a href="login.html" class="cta-btn">Login Here</a>
+        </div>
+    </section>
+    <!-- About Section -->
+    <section id="about">
+        <h2>About the Challenge</h2>
+        <p>This program supports youth in their journey to adapt to life in Canada through structured activities, including language practice, cultural insights, and personal growth.</p>
+   <ul>
+             <li>Daily Word Practice: Learn a new word every day.</li>
+            <li>Reading and Comprehension: Improve language through reading articles and discussing them.</li>
+<li>Conversation Practice: Practice speaking and presenting.</li>
+<li>Daily Gratitude Writing: Develop positive thinking and language skills simultaneously.</li>
+<li>Weekly Library Visit: Explore books and deepen language understanding.</li>
+        </ul>
+        <p>In addition, we’ll cover social norms and customs to ensure that every participant feels more at home in their new environment.</p>
+    </section>
+<section id="register">
+        <h2>Register for the Challenge</h2>
+        <p>If you're a newcomer youth accessing Covenant House services, sign up for the 21-Day Habit Challenge today! and we will contact you as soon as posible</p>
+        <form action="https://formspree.io/f/myzzbjrk" method="POST">
+<br>
+<br>
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+	    <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+
+            <label for="motivation">Why do you want to join the challenge?</label>
+            <textarea id="motivation" name="motivation" required></textarea>
+<br>
+            <button type="submit" class="cta-btn">Submit</button>
+        </form>
+    </section>
+<!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions, feel free to reach out:</p>
+        <p>Email: <a href="mailto:kaleamseged@covenanthouse.ca">kalemseged@covenanthouse.ca</a></p>
+            </section>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 kaleab Alemseged | All Rights Reserved</p>
+    </footer>
+
+    <script>
+        // Mock user database (for demonstration purposes)
+        const users = [];
+
+        // Function to handle user sign-up
+        function signupUser() {
+            const name = document.getElementById('signup-name').value;
+            const email = document.getElementById('signup-email').value;
+            const password = document.getElementById('signup-password').value;
+
+            if (users.find(user => user.email === email)) {
+                alert('Email already registered. Please log in.');
+                return;
+            }
+
+            users.push({ name, email, password });
+            alert('Sign-up successful! You can now log in.');
+        }
+
+        // Function to handle user login
+        function loginUser() {
+            const email = document.getElementById('login-email').value;
+            const password = document.getElementById('login-password').value;
+
+            const user = users.find(user => user.email === email && user.password === password);
+
+            if (user) {
+                alert(`Welcome back, ${user.name}! Redirecting to your dashboard.`);
+                window.location.href = 'dashboard.html'; // Replace with your post-login page
+            } else {
+                alert('Invalid email or password. Please try again.');
+            }
+        }
+    </script>
+</body>
+</html>
